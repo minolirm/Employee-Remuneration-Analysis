@@ -98,7 +98,7 @@ This structure supports efficient slicing and aggregation in Power BI.
 
 ## Power BI Dashboard
 
-### Executive Overview — Workforce & Cost Trends
+### Executive Overview - Workforce & Cost Trends
 
 Designed for high-level decision-makers.
 
