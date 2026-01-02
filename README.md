@@ -65,6 +65,7 @@ Key checks performed:
 - Duplicate records across Year, Employee, Department, and Title
 - No negative values in financial columns
 - Inconsistent Department Names and Job TItles
+  
 ---
 
 ## Data Cleaning & Preparation
@@ -75,7 +76,7 @@ Cleaning was performed entirely in SQL.
 - Trimmed and standardized text fields
 - Consolidated inconsistent department names
 - Standardized job titles and corrected numbering inconsistencies
-- 
+  
 This ensured accurate aggregation and consistent reporting.
 
 All cleaning logic is documented in the `sql/data_cleaning.sql` script.
