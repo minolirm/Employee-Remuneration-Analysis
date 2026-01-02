@@ -79,7 +79,7 @@ Cleaning was performed entirely in SQL.
   
 This ensured accurate aggregation and consistent reporting.
 
-All cleaning logic is documented in the `sql/data_cleaning.sql` script.
+All cleaning logic is documented in the `sql/02_data_cleaning.sql` script.
 
 ---
 
