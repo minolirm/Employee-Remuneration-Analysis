@@ -1,15 +1,21 @@
-# Employee-Remuneration-Analysis
-End-to-end data analytics project using SQL Server and Power BI to analyze employee remuneration and expenses for City of Vancouver employees earning over $75,000 per year.
+# Workforce & Compensation Analytics
+**SQL Server | Data Modeling | Power BI | DAX**
 ---
+
+
+## Project Overview
+This project analyzes employee remuneration and expenses for **City of Vancouver employees earning over $75,000 per year** using an end-to-end analytics workflow.
+
+The focus of this project is not only visualization, but **data quality, standardization, dimensional modeling, and business-ready reporting**. Raw open data was cleaned and modeled in SQL Server before being analyzed in Power BI using DAX.
 
 ##  Project Objective
 
 The objective of this project is to:
 - Clean and standardize a real-world government payroll dataset
-- Design a relational data model suitable for analytics
-- Build an interactive Power BI dashboard to analyze trends, costs, and year-over-year changes
-- Demonstrate an end-to-end analytics workflow used in production environments
-
+- Perform data profiling and quality checks
+- Build a star schema for analytical reporting
+- Create executive-level and department-level dashboards
+- Use DAX for KPIs and year-over-year analysis
 ---
 
 ## Dataset Overview
@@ -32,16 +38,16 @@ The objective of this project is to:
 - SQL Server Management Studio (SSMS)
 - SQL Server (Relational Database)
 - Power BI Desktop
-
+- DAX (Data Analysis Expressions)
 ---
 
 ## Project Workflow
 
-1. Data ingestion and staging in SQL Server  
-2. Data profiling and quality checks  
+1. Data ingestion into SQL staging tables  
+2. Data profiling and quality validation  
 3. Data cleaning and standardization  
 4. Dimensional data modeling (star schema)  
-5. Power BI visualization and analysis  
+5. Power BI reporting with DAX  
 
 ---
 
@@ -63,11 +69,14 @@ Key checks performed:
 
 ## Data Cleaning & Preparation
 
-Cleaning decisions:
-- Replaced null expense values with 0
+Cleaning was performed entirely in SQL.
+**Key actions:**
+- Replaced null expense values with `0`
 - Trimmed and standardized text fields
-- Consolidated department naming variations
-- Standardized job titles and corrected inconsistencies
+- Consolidated inconsistent department names
+- Standardized job titles and corrected numbering inconsistencies
+- 
+This ensured accurate aggregation and consistent reporting.
 
 All cleaning logic is documented in the `sql/data_cleaning.sql` script.
 
@@ -88,11 +97,34 @@ This structure supports efficient slicing and aggregation in Power BI.
 
 ## Power BI Dashboard
 
-The Power BI dashboard provides:
-- Total remuneration and expenses over time
-- Department-level cost analysis
-- Employee and title distribution
-- Year-over-Year (YoY) changes in remuneration and expenses
+### Executive Overview — Workforce & Cost Trends
+
+Designed for high-level decision-makers.
+
+**KPIs**
+- Total Employees
+- Total Departments
+- Total Job Titles
+- Total Remuneration
+- Total Expenses
+- Total Compensation
+
+**Insights**
+- Workforce growth over time
+- Year-over-year changes in remuneration and expenses
+- Average compensation trends
+
+---
+
+### Department-Level Workforce & Cost Trends
+
+Designed for operational analysis.
+
+**Features**
+- Year and Department slicers
+- Top departments by employee count
+- Top departments by total remuneration
+- Employee count vs average cost per employee
 
 Dashboard file:  
 `/powerbi/Employee_Remuneration_Analysis.pbix`
